@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="210mm"
+        height="210mm"
+        viewBox="0 60 210 100"
+        version="1.1"
+        id="svg8">
+    <defs
+            id="defs2">
+        <rect
+                x="145.09395"
+                y="70.071812"
+                width="52.110145"
+                height="34.759322"
+                id="rect34"/>
+        <rect
+                x="140.44547"
+                y="68.72541"
+                width="42.514385"
+                height="38.391783"
+                id="rect28"/>
+        <rect
+                x="138.96494"
+                y="67.4326"
+                width="50.003592"
+                height="38.444405"
+                id="rect22"/>
+        <rect
+                x="167.16828"
+                y="67.381361"
+                width="66.359368"
+                height="16.073539"
+                id="rect16"/>
+    </defs>
+    <style>
+        tspan{
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto
+        Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",
+        font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:160.299px;line-height:1.25;font-family:'DejaVu
+        Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono,
+        Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:rgba(0,0,0,.9);fill-opacity:1;stroke:none;stroke-width:2.87014;
+        fill:black;
+        fill-opacity:1;
+        line-height:1.25;
+        stroke:none;
+        font-family:sans-serif;
+        font-style:normal;
+        font-weight:normal;
+        font-size:10.58333333px;
+        white-space:pre;
+        shape-inside:url(#rect16);
+        fill:black;
+        fill-opacity:1;
+        line-height:1.25;
+        stroke:none;
+        font-family: sans-serif;
+        font-style:normal;
+        font-weight:normal;
+        font-size:10.58333333px;
+        white-space:pre;
+        shape-inside:url(#rect34);
+        fill:black;
+        fill-opacity:1;
+        line-height:1.25;
+        stroke:none;
+        font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.58333333px;white-space:pre;shape-inside:url(#rect28);
+        fill:black;
+        fill-opacity:1;
+        line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.58333333px;white-space:pre;shape-inside:url(#rect22);
+        font-style:normal;
+        font-variant:normal;font-weight:bold;font-stretch:normal;font-size:160.299px;font-family:'DejaVu
+        Sans Mono';
+        -inkscape-font-specification:'DejaVu Sans Mono, Bold';
+        font-variant-ligatures:normal;
+        font-variant-caps:normal;
+        font-variant-numeric:normal;
+        font-variant-east-asian:normal;
+        stroke-width:2.87014;
+
+        fill-opacity:1;
+        fill: #18f3bd;
+        }
+    </style>
+    <g
+            id="layer1">
+        <text
+                xml:space="preserve"
+                x="18.28371"
+                y="156.47781"
+                id="text12"
+                fill="rgba(0,0,0,.9)"
+                transform="scale(0.92620335,1.0796765)"><tspan
+         id="tspan10"
+         x="18.28371"
+         y="156.47781"
+         style="">&gt;F</tspan></text>
+    </g>
+</svg>

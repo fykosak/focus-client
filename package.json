@@ -14,13 +14,18 @@
     "react": "16.13.1",
     "react-redux": "~7.0.3",
     "react-dom": "16.9.0",
-    "redux": "~4.0.1"
+    "redux": "~4.0.1",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0"
   },
   "devDependencies": {
     "@types/react": "16.9.51",
     "@types/react-dom": "16.9.8",
     "@types/react-redux": "~7.0.8",
     "@types/redux": "~3.6.0",
+    "@types/react-router": "latest",
+    "@types/react-router-dom": "latest",
+    "redux-logger": "^3.0.6",
     "awesome-typescript-loader": "~5.2.1",
     "schedule": "^0.4.0",
     "source-map-loader": "~0.2.4",
