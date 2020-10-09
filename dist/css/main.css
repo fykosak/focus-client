@@ -1,0 +1,9 @@
+h1 {
+    color: #18f3bd;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('../images/bg.png');
+    background-color: #131433;
+}
