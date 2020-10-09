@@ -6,7 +6,8 @@
   "repository": "https://github.com/fykosak/focus-client",
   "scripts": {
     "prod": "webpack --watch --color --mode=\"production\"",
-    "dev": "webpack --watch --color --mode=\"development\""
+    "dev": "webpack --watch --color --mode=\"development\"",
+    "build": "webpack"
   },
   "author": "",
   "license": "",
