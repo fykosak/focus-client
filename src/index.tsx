@@ -4,10 +4,10 @@ import { applyMiddleware, createStore } from 'redux';
 import logger from 'redux-logger';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom'; // todo use browser router
-import Nav from './Components/NavBar/Nav';
-import Main from './Components/Main/MainRouter';
+import Nav from './components/navBar/';
+import Main from './components/main/index';
 import { app } from './reducers';
-import Footer from '@app/Components/Footer/Footer';
+import Index from '@app/components/footer/';
 
 class App extends React.Component<{}, {}> {
 
@@ -17,7 +17,7 @@ class App extends React.Component<{}, {}> {
             <HashRouter>
                 <Nav/>
                 <Main/>
-                <Footer/>
+                <Index/>
             </HashRouter>
         </Provider>;
     }

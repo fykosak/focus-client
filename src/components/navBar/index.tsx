@@ -1,19 +1,25 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Store } from '@app/reducers';
 import { connect } from 'react-redux';
+import { Action, Dispatch } from 'redux';
+import { actionLogout } from '@app/actions/userStorage';
 
 interface StoreProps {
     isLoggedIn: boolean;
 }
 
-class Nav extends React.Component<StoreProps, {}> {
+interface DispatchProps {
+    logout(): void;
+}
+
+class Index extends React.Component<StoreProps & DispatchProps, {}> {
     public render() {
         return <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-fol text-fol">
-            <a className="navbar-brand" href="#">
+            <Link to="/" className="navbar-brand">
                 <img src="./images/logo.svg" width="30" height="30"
                      className="d-inline-block align-top" alt=""/>
-            </a>
+            </Link>
             <a className="navbar-brand" href="#">Fyziklani online</a>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,7 +42,10 @@ class Nav extends React.Component<StoreProps, {}> {
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <NavLink activeClassName="active" to="login" className="nav-link">Logout</NavLink>
+                        <a className="nav-link" onClick={() => {
+                            this.props.logout()
+                        }}>Logout
+                        </a>
                     </li>
                 </ul>
             </div>}
@@ -52,4 +61,10 @@ const mapStateToProps = (state: Store): StoreProps => {
     }
 }
 
-export default connect(mapStateToProps, null)(Nav)
+const mapDispatchToProps = (dispatch: Dispatch<Action<string>>): DispatchProps => {
+    return {
+        logout: () => dispatch(actionLogout()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index)

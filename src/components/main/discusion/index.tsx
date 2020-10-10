@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export default class Discussion extends React.Component<{}, {}> {
+export default class Index extends React.Component<{}, {}> {
 
     public render() {
         return <main className="container">

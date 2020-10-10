@@ -14,7 +14,7 @@
     "react": "16.13.1",
     "react-redux": "~7.0.3",
     "react-dom": "16.9.0",
-    "redux": "~4.0.1",
+    "redux": "4.0.5",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0"
   },
@@ -22,7 +22,7 @@
     "@types/react": "16.9.51",
     "@types/react-dom": "16.9.8",
     "@types/react-redux": "~7.0.8",
-    "@types/redux": "~3.6.0",
+    "@types/redux": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
     "redux-logger": "^3.0.6",
