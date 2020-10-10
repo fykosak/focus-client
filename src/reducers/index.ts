@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { userStorage, UserStorageState } from './userStoreage';
-import { tasksStorage, TasksStorage } from '@app/reducers/tasksStorage';
+import { tasksStorage, TasksStorageState } from '@app/reducers/tasksStorage';
 
 export const app = combineReducers({
     userStorage,
@@ -9,5 +9,5 @@ export const app = combineReducers({
 
 export interface Store {
     userStorage: UserStorageState;
-    tasksStorage: TasksStorage;
+    tasksStorage: TasksStorageState;
 }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import LoginForm from '@app/components/main/loginForm';
 import Tasks from '@app/components/main/task/';
-import Index from '@app/components/main/discusion/';
+import Discussion from '@app/components/main/discusion/';
 import { connect } from 'react-redux';
 import { Store } from '@app/reducers';
 
@@ -25,7 +25,7 @@ class MainRouter extends React.Component<StoreProps, {}> {
                 </main>
             </Route>
             <Route path="/Discussion">
-                <Index/>
+                <Discussion/>
             </Route>
             <Route exact path="/">
                 <main className="container">

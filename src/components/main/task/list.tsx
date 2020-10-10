@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import LocalString from '@app/components/lang/LocalString';
+import LocalString from '@app/components/lang/localString';
 import { Store } from '@app/reducers';
 import { connect } from 'react-redux';
-import { TaskDefinition } from '@app/reducers/tasksStorage';
+import { LineDefinition, TaskDefinition } from '@app/reducers/tasksStorage';
 
 
 interface OwnProps {
@@ -12,7 +12,7 @@ interface OwnProps {
 
 interface StoreProps {
     tasks: TaskDefinition[];
-    lines: any[];
+    lines: LineDefinition[];
 }
 
 class List extends React.Component<OwnProps & StoreProps, {}> {

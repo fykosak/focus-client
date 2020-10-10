@@ -1,4 +1,5 @@
 import { ACTION_LOGIN, ACTION_LOGOUT } from '@app/actions/userStorage';
+import { Action } from 'redux';
 
 export interface UserStorageState {
     isLoggedIn: boolean
@@ -18,7 +19,7 @@ const login = (state: UserStorageState): UserStorageState => {
     }
 }
 
-export const userStorage = (state: UserStorageState = {isLoggedIn: true}, action) => {
+export const userStorage = (state: UserStorageState = {isLoggedIn: true}, action: Action<string>): UserStorageState => {
     switch (action.type) {
         case ACTION_LOGOUT:
             return logout(state);

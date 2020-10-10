@@ -5,7 +5,7 @@ export interface TaskFactoryInputDefinition {
     type: 'string' | 'int' | 'real' | 'perm'; // TODO
     label: localisedType<string>;
     description?: localisedType<string>;
-    unit?: string;
+    units: string[];
 }
 
 export interface TaskFactoryDefinition {
@@ -18,20 +18,25 @@ export interface TaskFactoryDefinition {
 export interface TaskDefinition {
     taskId: number;
     lineId: number;
-    status: 'available' | 'skipped' | 'pending' | 'solved' | 'passed';
+    status: 'available' | 'skipped' | 'pending' | 'solved' | 'passed' | 'timeouted'; // TODO
     files: localisedType<string[]>;
     label: localisedType<string>;
     name: localisedType<string>;
     factory: TaskFactoryDefinition;
-    stats: any;
+    stats: null;
 }
 
-export interface TasksStorage {
+export interface LineDefinition {
+    name: localisedType<string>;
+    lineId: number;
+}
+
+export interface TasksStorageState {
     tasks: TaskDefinition[],
-    lines: any[],
+    lines: LineDefinition[],
 }
 
-const intData: TasksStorage = { // TODO temp data
+const intData: TasksStorageState = { // TODO temp data
     tasks: [
         {
             taskId: 1234,
@@ -71,7 +76,7 @@ const intData: TasksStorage = { // TODO temp data
                             en: 'vagina depth',
                             pl: 'pochwa głębokość'
                         },
-                        unit: 'cm'
+                        units: ['cm', 'mm', 'um']
                     },
                     '1': {
                         type: 'string',
@@ -85,7 +90,17 @@ const intData: TasksStorage = { // TODO temp data
                             en: 'penis lenght',
                             pl: 'kutas długość'
                         },
-                        unit: 'cm'
+                        units: ['cm']
+                    },
+                    '2': {
+                        type: 'real',
+                        label: {
+                            cs: 'kozy',
+                            en: 'kozy',
+                            pl: 'cicky'
+                        },
+                        description: null,
+                        units: []
                     }
                 }
             }
@@ -107,7 +122,7 @@ const intData: TasksStorage = { // TODO temp data
     ],
 }
 
-export const tasksStorage = (state: TasksStorage = intData, action: Action<string>) => {
+export const tasksStorage = (state: TasksStorageState = intData, action: Action<string>): TasksStorageState => {
     switch (action.type) {
         default:
             return state;

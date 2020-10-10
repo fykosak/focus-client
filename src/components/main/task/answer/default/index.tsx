@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { TaskFactoryDefinition } from '@app/reducers/tasksStorage';
-import AnswerInput from '@app/components/main/task/answer/answerInput';
+import AnswerInput from '@app/components/main/task/answer/default/inputFactory';
 
 interface OwnProps {
     factory: TaskFactoryDefinition;
 }
 
-export default class AnswerForm extends React.Component<OwnProps, {}> {
+export default class Index extends React.Component<OwnProps, {}> {
 
     public render() {
         const {factory: {inputs}} = this.props;

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { TaskFactoryInputDefinition } from '@app/reducers/tasksStorage';
-import LocalString from '@app/components/lang/LocalString';
+import LocalString from '@app/components/lang/localString';
+import Unit from '@app/components/main/task/answer/default/unit';
 
 interface OwnProps {
     input: TaskFactoryInputDefinition;
     name: string;
 }
 
-export default class AnswerInput extends React.Component<OwnProps, {}> {
+export default class InputFactory extends React.Component<OwnProps, {}> {
 
     public render() {
         const {input, name} = this.props;
@@ -22,7 +23,7 @@ export default class AnswerInput extends React.Component<OwnProps, {}> {
     }
 
     private createInput() {
-        const {input, name} = this.props;
+        const {input} = this.props;
         switch (input.type) {
             case 'int':
                 return this.createInputContainer(this.createInt());
@@ -35,13 +36,7 @@ export default class AnswerInput extends React.Component<OwnProps, {}> {
 
     private createInputContainer(inputNode: JSX.Element): JSX.Element {
         const {input} = this.props;
-        return input.unit ? <div className="input-group">
-            {inputNode}
-            <div className="input-group-append">
-                <div className="input-group-text">{input.unit}</div>
-            </div>
-        </div> : inputNode
-
+        return <Unit units={input.units}>{inputNode}</Unit>;
     }
 
     private createString(): JSX.Element {

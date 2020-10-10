@@ -3,9 +3,8 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { Store } from '@app/reducers';
 import { connect } from 'react-redux';
 import { TaskDefinition } from '@app/reducers/tasksStorage';
-import LocalString from '@app/components/lang/LocalString';
-import AnswerForm from '@app/components/main/task/answer/answerForm';
-import { availableLanguages } from '@app/components/lang/interface';
+import LocalString from '@app/components/lang/localString';
+import Form from '@app/components/main/task/answer/form';
 import TaskSource from '@app/components/main/task/source';
 
 interface OwnProps extends RouteComponentProps<{ id: string }> {
@@ -13,14 +12,12 @@ interface OwnProps extends RouteComponentProps<{ id: string }> {
 
 interface StoreProps {
     tasks: TaskDefinition[];
-    lines: any[];
-    lang: availableLanguages;
 }
 
 class Task extends React.Component<OwnProps & StoreProps, {}> {
 
     public render() {
-        const {tasks, match: {params: {id}}, lang} = this.props;
+        const {tasks, match: {params: {id}}} = this.props;
         const candidates = tasks.filter((task) => {
             return task.taskId === +id;
         });
@@ -34,7 +31,7 @@ class Task extends React.Component<OwnProps & StoreProps, {}> {
             <TaskSource factory={task}/>
             <h2>Submit Answer</h2>
             <div>
-                <AnswerForm factory={task.factory}/>
+                <Form factory={task.factory}/>
             </div>
 
             <h2>Submitted answers</h2>
@@ -45,8 +42,6 @@ class Task extends React.Component<OwnProps & StoreProps, {}> {
 const mapStateToProps = (state: Store): StoreProps => {
     return {
         tasks: state.tasksStorage.tasks,
-        lines: state.tasksStorage.lines,
-        lang: 'pl',
     }
 }
 
